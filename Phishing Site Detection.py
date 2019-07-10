@@ -27,6 +27,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.pipeline import Pipeline
 from keras.layers import LeakyReLU
 from keras import optimizers
+from sklearn.linear_model import LogisticRegression
 
 
 from sklearn.metrics import confusion_matrix
@@ -111,7 +112,7 @@ data['DT'] = pred
 # In[10]:
 
 
-from sklearn.linear_model import LogisticRegression
+
 log = LogisticRegression(multi_class = 'multinomial', solver = 'newton-cg')
 log.fit(xtrain, ytrain)
 pred = log.predict(xtest)
