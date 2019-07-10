@@ -46,7 +46,8 @@ warnings.filterwarnings('ignore')
 # In[2]:
 
 
-data = pd.read_csv('../phishcoop.csv')
+data = arff.loadarff('../dataset.arff')
+data = pd.DataFrame(data[0])
 data = data.drop(columns = "id")
 data.head(2)
 
